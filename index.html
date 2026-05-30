@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -218,6 +217,10 @@
             line-height: 1.8;
         }
 
+        .about-text p + p {
+            margin-top: 1rem;
+        }
+
         /* Skills Section */
         .skills-grid {
             display: grid;
@@ -320,6 +323,50 @@
             border: 1px solid rgba(78, 205, 196, 0.3);
         }
 
+        .project-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1.25rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .github-btn:hover {
+            background: rgba(78, 205, 196, 0.2);
+            border-color: #4ecdc4;
+            color: #4ecdc4;
+            transform: translateY(-2px);
+        }
+
+        .wip-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: rgba(255, 193, 7, 0.15);
+            color: #ffc107;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
         /* Contact Section */
         .contact-content {
             text-align: center;
@@ -411,7 +458,7 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">Portfolio</div>
+            <div class="logo">KR</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -426,7 +473,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Kanish Rajpali</h1>
-            <p>AI Engineer & Creative Problem Solver</p>
+            <p>Python Backend Developer & ServiceNow Engineer</p>
             <a href="#projects" class="cta-button">View My Work</a>
         </div>
     </section>
@@ -437,8 +484,9 @@
         <div class="about-content">
             <div class="about-image">👨‍💻</div>
             <div class="about-text">
-                <p>I'm a passionate developer with a love for creating innovative solutions and beautiful user experiences. With expertise in modern web technologies, I bring ideas to life through clean, efficient code and thoughtful design.</p>
-                <p>When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or enjoying a good cup of coffee while brainstorming the next big idea.</p>
+                <p>I'm a Python backend developer and ServiceNow engineer with hands-on experience building AI-powered applications and enterprise integrations. I hold a B.Tech from UPES and have worked as a ServiceNow Developer at Virtuxient Technologies, where I built real PDI-to-PDI integrations using REST APIs and Business Rules.</p>
+                <p>I've also worked as a Technical Support Engineer at Concentrix, supporting Dell Technologies enterprise US accounts — giving me a strong grounding in ITSM and enterprise workflows that I now bring into my AI projects.</p>
+                <p>My focus is on building practical AI solutions using Python, FastAPI, RAG pipelines, and LLM APIs. I'm currently studying for AWS SAA-C03 certification and expanding into DevOps and cloud-native architectures.</p>
             </div>
         </div>
     </section>
@@ -448,20 +496,20 @@
         <h2 class="section-title">Skills & Technologies</h2>
         <div class="skills-grid">
             <div class="skill-card">
-                <h3>Frontend Development</h3>
-                <p>React, Vue.js, TypeScript, HTML5, CSS3, Tailwind CSS, Next.js</p>
+                <h3>🤖 AI & LLM Engineering</h3>
+                <p>Python, FastAPI, LangChain, LangGraph, RAG Pipelines, OpenAI API, ChromaDB, Document Intelligence, Ollama</p>
             </div>
             <div class="skill-card">
-                <h3>Backend Development</h3>
-                <p>Node.js, Python, Express.js, FastAPI, PostgreSQL, MongoDB</p>
+                <h3>⚙️ ServiceNow</h3>
+                <p>Flow Designer, Business Rules, REST API Integrations, PDI-to-PDI Integration, ITSM, Client Scripts, Script Includes</p>
             </div>
             <div class="skill-card">
-                <h3>Cloud & DevOps</h3>
-                <p>AWS, Docker, Kubernetes, CI/CD, GitHub Actions, Vercel</p>
+                <h3>🔧 Backend & Databases</h3>
+                <p>Python, FastAPI, PostgreSQL, Docker, REST APIs, ChromaDB, OpenAI Embeddings, Git</p>
             </div>
             <div class="skill-card">
-                <h3>Design & Tools</h3>
-                <p>Figma, Adobe Creative Suite, Git, VS Code, Postman</p>
+                <h3>☁️ Cloud & DevOps</h3>
+                <p>AWS (SAA-C03 in progress), Docker, GitHub Actions, CI/CD, Terraform (learning), Linux</p>
             </div>
         </div>
     </section>
@@ -470,89 +518,72 @@
     <section id="projects" class="section fade-in">
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
+
             <div class="project-card">
-                <div class="project-image">🚀</div>
+                <div class="project-image">🔗</div>
                 <div class="project-content">
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-stack e-commerce solution with modern UI, secure payments, and real-time inventory management.</p>
+                    <h3>ServiceNow PDI-to-PDI Integration</h3>
+                    <p>Built a real-world integration between two ServiceNow Personal Developer Instances using REST APIs and Business Rules. Enables cross-instance data sync for incident and change management workflows.</p>
+                    <div class="project-tags">
+                        <span class="tag">ServiceNow</span>
+                        <span class="tag">REST API</span>
+                        <span class="tag">Business Rules</span>
+                        <span class="tag">ITSM</span>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/kanishpy/servicenow-pdi-ebonding" target="_blank" class="github-btn">🐙 View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">📄</div>
+                <div class="project-content">
+                    <h3>AI Document Analyzer</h3>
+                    <p>An AI-powered document analysis tool that extracts, indexes, and answers questions from uploaded documents using RAG pipelines. Built with FastAPI, ChromaDB for vector storage, and OpenAI embeddings.</p>
+                    <div class="project-tags">
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">ChromaDB</span>
+                        <span class="tag">OpenAI</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">RAG</span>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/kanishpy/Doc_portal" target="_blank" class="github-btn">🐙 View on GitHub</a>
+                        <span class="wip-badge">🚧 In Progress</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🎯</div>
+                <div class="project-content">
+                    <h3>Job Application Agent</h3>
+                    <p>A full-stack AI agent that generates tailored cover letters and recruiter outreach messages using the Claude API. Features a React frontend where users input job descriptions and receive personalized application content.</p>
                     <div class="project-tags">
                         <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Stripe</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image">📱</div>
-                <div class="project-content">
-                    <h3>Task Management App</h3>
-                    <p>A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.</p>
-                    <div class="project-tags">
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">Socket.io</span>
-                        <span class="tag">MongoDB</span>
-                        <span class="tag">Express</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image">🤖</div>
-                <div class="project-content">
-                    <h3>AI Content Generator</h3>
-                    <p>An AI-powered content generation tool that helps creators produce engaging content across multiple platforms.</p>
-                    <div class="project-tags">
+                        <span class="tag">Claude API</span>
                         <span class="tag">Python</span>
                         <span class="tag">FastAPI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🎫</div>
+                <div class="project-content">
+                    <h3>AI Support Ticket Assistant</h3>
+                    <p>An intelligent support ticket system that uses AI to classify, route, and suggest resolutions for enterprise IT tickets. Built leveraging my enterprise support background with Dell Technologies workflows.</p>
+                    <div class="project-tags">
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">ChromaDB</span>
                         <span class="tag">OpenAI</span>
-                        <span class="tag">React</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image">📊</div>
-                <div class="project-content">
-                    <h3>Analytics Dashboard</h3>
-                    <p>A comprehensive analytics dashboard with interactive charts, real-time data visualization, and custom reporting features.</p>
-                    <div class="project-tags">
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">D3.js</span>
-                        <span class="tag">Next.js</span>
                         <span class="tag">PostgreSQL</span>
+                        <span class="tag">Docker</span>
                     </div>
                 </div>
             </div>
-            
-            <div class="project-card">
-                <div class="project-image">🎵</div>
-                <div class="project-content">
-                    <h3>Music Streaming Platform</h3>
-                    <p>A modern music streaming application with playlist management, social features, and personalized recommendations.</p>
-                    <div class="project-tags">
-                        <span class="tag">React Native</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Redis</span>
-                        <span class="tag">AWS S3</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image">🌐</div>
-                <div class="project-content">
-                    <h3>Social Media Platform</h3>
-                    <p>A full-featured social media platform with real-time messaging, content sharing, and advanced privacy controls.</p>
-                    <div class="project-tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">GraphQL</span>
-                        <span class="tag">Prisma</span>
-                        <span class="tag">WebSocket</span>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -560,19 +591,16 @@
     <section id="contact" class="section fade-in">
         <h2 class="section-title">Let's Connect</h2>
         <div class="contact-content">
-            <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+            <p>I'm actively looking for Python backend, AI engineering, and ServiceNow roles. If you have an opportunity or just want to talk tech, feel free to reach out!</p>
             <div class="contact-links">
                 <a href="mailto:kanishrajpali@gmail.com" class="contact-link">
                     📧 Email
                 </a>
-                <a href="https://www.linkedin.com/in/kanish-rajpali/" class="contact-link">
+                <a href="https://www.linkedin.com/in/kanish-rajpali/" class="contact-link" target="_blank">
                     💼 LinkedIn
                 </a>
-                <a href="https://github.com/kanishpy" class="contact-link">
+                <a href="https://github.com/kanishpy" class="contact-link" target="_blank">
                     🐙 GitHub
-                </a>
-                <a href="https://twitter.com/yourusername" class="contact-link">
-                    🐦 Twitter
                 </a>
             </div>
         </div>
